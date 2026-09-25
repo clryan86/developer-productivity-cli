@@ -1,0 +1,20 @@
+[project]
+name="devpulse-cli"
+version="1.0.0"
+description="Repository health audits and developer environment diagnostics"
+requires-python=">=3.11"
+
+[project.scripts]
+devpulse="devpulse.cli:main"
+
+[tool.pytest.ini_options]
+testpaths=["tests"]
+pythonpath=["."]
+addopts="-q"
+
+[tool.ruff]
+line-length=110
+target-version="py311"
+
+[tool.ruff.lint]
+select=["F"]
